@@ -1,0 +1,30 @@
+#!/usr/bin/gnuplot 
+
+
+#system("echo $fname")
+
+set title tname
+
+set timefmt "%s"
+set format x "%D"
+set xdata time
+
+#set lmargin 1 
+
+set key off
+
+set style line 5 lt rgb "red" lw 1 pt 4
+
+#set autoscale x
+
+set xtics font ", 6"
+set ytics font ", 6"
+set yrange [] reverse
+
+# set xlabel 'time'
+# set ylabel 'rank'
+ set grid
+ set term pngcairo size 600, 200
+ set output fname
+set datafile separator ","
+ plot filename using 1:2 with lines ls 5
