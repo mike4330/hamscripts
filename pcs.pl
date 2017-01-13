@@ -8,19 +8,19 @@ open (R,"$prefix/ranks") || die "cannot open ranks";
 
 while (<R>) {
 
-($call,$foo)=split;
+	($call,$foo)=split;
 
-#print "$call\n";
+	#print "$call\n";
 
-open (Q,"$prefix/ranksh.csv") || die "cannot open historical $!";
+	open (Q,"$prefix/ranksh.csv") || die "cannot open historical $!";
 
-open (T,">$prefix/datafiles/$call.tcsv");
+	open (T,">$prefix/datafiles/$call.tcsv");
 
-while (<Q>) {if ($_ =~ /$call/) {
-	chomp();
-	($ts,$call,$rank)=split(/,/);
-	print T "$ts,$rank\n";
-	}
+	while (<Q>) {if ($_ =~ /$call/) {
+		chomp();
+		($ts,$call,$rank)=split(/,/);
+		print T "$ts,$rank\n";
+		}
 	};
 
 close (T);
@@ -33,26 +33,18 @@ close (R);
 
 open (R,"$prefix/ranks") || die "cannot open ranks";
 
-#@filez=<$prefix/*.tcsv>;
-
 while (<R>) {
 
-($call,$foo)=split;
+	($call,$foo)=split;
 
-$infile=$prefix . '/datafiles/' . $call . '.tcsv';
-$outfile=$call . '.png';
+	$infile=$prefix . '/datafiles/' . $call . '.tcsv';
+	$outfile=$call . '.png';
 
+	$fn=$cs . '.png';
 
-$fn=$cs . '.png';
+	print "plot $call\n";
 
-
-
-#print "infile is $infile outfile is $outfile\n";
-
-
-print "plot $call\n";
-
-system("gnuplot -e \"filename='$infile';fname='/var/www/testimg/$outfile';tname='$call'\" $prefix/plotcs"); 
+	system("gnuplot -e \"filename='$infile';fname='/var/www/testimg/$outfile';tname='$call'\" $prefix/plotcs"); 
 
 
 }
