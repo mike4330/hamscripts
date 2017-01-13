@@ -9,6 +9,10 @@ $outfile=$prefix . '/cqers.csv';
 
 $rankfile = $prefix . '/ranks';
 
+open (CR,"$prefix/creds") || die "cannot open creds $!";
+
+while (<CR>){($fuser,$fpwd)=split;}
+
 #load previous positions
 open (PI,"$rankfile") || die "cannot open $rankfile $!\n";
 
@@ -117,7 +121,7 @@ print "starting web upload\n";
 $ftp = Net::FTP->new("ftp.roetto.org", Debug => 0)
 	or die "Cannot connect to some.host.name: $@";
 
-$ftp->login("mikenola",'$30.00Dinner')
+$ftp->login($fuser,$fpwd)
 	or die "Cannot login ", $ftp->message;
 
    $ftp->cwd("/www/K5ROE")
