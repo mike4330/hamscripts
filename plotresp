@@ -9,6 +9,7 @@ set xdata time
 set key off
 
 set style line 5 lt rgb "green" lw 2 pt 6
+set style line 6 lt rgb "blue" lw 1
 
 
 set autoscale x
@@ -19,6 +20,9 @@ set xtics font ", 8"
  set ylabel 'unique'
  set grid
  set term pngcairo size 900, 400
- set output '/var/www/K5ROE/cqresp.png'
 set datafile separator ","
- plot '/home/mike/scripts/ham/cqresp.csv' using 1:2 with lines ls 5
+f(x) = a*x + b
+fit f(x) '/home/mike/scripts/ham/cqresp.csv' using 1:2  via a,b
+
+ set output '/var/www/K5ROE/cqresp.png'
+ plot '/home/mike/scripts/ham/cqresp.csv' using 1:2 with lines ls 5 smooth bezier, f(x) with lines ls 6
