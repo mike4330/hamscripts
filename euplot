@@ -1,0 +1,56 @@
+#!/usr/bin/gnuplot 
+
+cd "/home/mike/scripts/ham"
+
+#set terminal x11 persist enhanced font "mono,7"
+#
+set term pngcairo size 1025, 450
+set term pngcairo font "mono,9"
+
+set title "Active Digital Amateur Radio Operators in the European region\n generated at `date -u`"
+
+set output '/var/www/html/K5ROE/images/counteu.png'
+
+set linestyle 1 lw 2 
+set linetype 10 lw 2
+set key below horizontal
+set grid
+set grid linestyle 2 
+set autoscale x
+set autoscale y
+
+set timefmt "%s"
+set xdata time
+set datafile separator "|"
+set format x "%Y%m%d"
+
+set logscale y
+
+plot "< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Andorra\" order by timestamp desc limit 1600'" using 1:2 with lp pi 64 title "Andorra",\
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Belgium\" order by timestamp desc limit 1600'" using 1:2 with lp pi 64 title "Belgium" ,\
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Croatia\" order by timestamp desc limit 1600'" using 1:2 with lp pi 64 title "Croatia" ,\
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"France\" order by timestamp desc limit 1600'" using 1:2 with lp pi 64 title "France" ,\
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Italy\" order by timestamp desc limit 1600'" using 1:2 with lp pi 64 title "Italy" ,\
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Netherlands\" order by timestamp desc limit 1600'" using 1:2 with lp pi 64 title "Netherlands" ,\
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Poland\" order by timestamp desc limit 1600'" using 1:2 with lp pi 64 title "Poland" ,\
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Spain\" order by timestamp desc limit 1600'" using 1:2 with lp pi 64 title "Spain" ,\
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Lithuania\" order by timestamp desc limit 1600'" using 1:2 with lp pi 64 title "Lithuania" ,\
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"United_Kingdom\" order by timestamp desc limit 1600'" using 1:2 with lp pi 64 title "United Kingdom" ,\
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Germany\" order by timestamp desc limit 1600'" using 1:2 with lp pi 64 title "Germany" 
+
+unset logscale y
+set output '/var/www/html/K5ROE/images/countscand.png'
+set title "Active Digital Amateur Radio Operators in the Scandinavian region\n generated at `date -u`"
+plot "< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Denmark\" order by timestamp DESC limit 800'" using 1:2 with lines lw 2 smooth bezier title "Denmark" ,\
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Norway\" order by timestamp DESC limit 800'" using 1:2 with lines lw 2 smooth bezier title "Norway" ,\
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Finland\" order by timestamp DESC limit 800'" using 1:2 with  lines lw 2  smooth bezier title "Finland"
+
+# asia
+set logscale y
+set title "Active Digital Amateur Radio Operators in the Asian region\n generated at `date -u`"
+set output '/var/www/html/K5ROE/images/countas.png'
+plot "< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Japan\"'" using 1:2 with lp pi 64 title "Japan",\
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"India\"'" using 1:2 with lp pi 64 title "India" ,\
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"South_Korea\"'" using 1:2 with lp pi 64 title "South Korea" ,\
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Thailand\"'" using 1:2 with lp pi 64 title "Thailand" ,\
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"China\"'" using 1:2 with lp pi 64 title "China" 

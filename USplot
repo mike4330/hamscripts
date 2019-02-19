@@ -1,0 +1,39 @@
+#!/usr/bin/gnuplot 
+
+cd "/home/mike/scripts/ham"
+
+#set terminal x11 persist enhanced font "mono,7"
+#
+set term pngcairo size 1025,450
+set term pngcairo font "mono,9"
+
+set title "Active Digital Amateur Radio Operators in United States region\n generated at `date -u`"
+
+
+set output '/var/www/html/K5ROE/images/countUS.png'
+
+set linestyle 1 lw 2 pi 5
+set pointinterval 10
+set key below horizontal
+
+
+set grid
+set grid linestyle 2 
+set autoscale x
+
+set timefmt "%s"
+set xdata time
+set datafile separator "|"
+set format x "%Y%m%d"
+
+
+ plot "< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"USA0\" ORDER BY timestamp DESC LIMIT 500 '" using 1:2 with lp pi 128  title "USA0", \
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"USA1\" ORDER BY timestamp DESC LIMIT 500 '" using 1:2 with lp pi 128 title "USA1" , \
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"USA2\" ORDER BY timestamp DESC LIMIT 500' " using 1:2 with lp pi 128 title "USA2" , \
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"USA3\" ORDER BY timestamp DESC LIMIT 500'" using 1:2 with lp pi 128 title "USA3" , \
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"USA4\" ORDER BY timestamp DESC LIMIT 500'" using 1:2 with lp pi 128 title "USA4" , \
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"USA5\" ORDER BY timestamp DESC LIMIT 500'" using 1:2 with lp pi 128 title "USA5" , \
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"USA6\" ORDER BY timestamp DESC LIMIT 500'" using 1:2 with lp pi 128 title "USA6" , \
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"USA7\" ORDER BY timestamp DESC LIMIT 500'" using 1:2 with lp pi 128 title "USA7" , \
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"USA8\" ORDER BY timestamp DESC LIMIT 500'" using 1:2 with lp pi 128 title "USA8" , \
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"USA9\" ORDER BY timestamp DESC LIMIT 500'" using 1:2 with lp pi 128 title "USA9" 

@@ -1,0 +1,33 @@
+#!/usr/bin/gnuplot 
+
+cd "/home/mike/scripts/ham"
+#set terminal x11 persist enhanced font "mono,7"
+#
+set term pngcairo size 825, 450
+set term pngcairo font "mono,9"
+
+set title "Active Digital Amateur Radio Operators in Middle East region\n generated at `date -u`"
+
+
+set output '/var/www/html/K5ROE/images/countME.png'
+
+set linestyle 1 lw 2 
+set key below horizontal
+
+
+set grid
+set grid linestyle 2 
+set autoscale x
+set autoscale y
+
+set timefmt "%s"
+set xdata time
+set datafile separator "|"
+set format x "%Y%m%d"
+
+ plot "< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Oman\"'" using 1:2 with lp pi 12  title "Oman", \
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Qatar\"'" using 1:2 with lp pi 12   title "Qatar" , \
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Algeria\"'" using 1:2 with lp pi 12     title "Algeria" , \
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country LIKE\"%Saudi%\"'" using 1:2 with lp pi 12   title "Saudi Arabia" , \
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Bahrain\"'" using 1:2 with lp pi 12    title "Bahrain" , \
+"< sqlite3 dxccstat.db 'select timestamp,active from main where country=\"Israel\"'" using 1:2 with lp pi 12     title "Israel" 

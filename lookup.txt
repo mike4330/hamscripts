@@ -1,0 +1,166 @@
+BL01,Hawaii
+BL11,Hawaii - Honolulu
+CM87,California - San Francisco
+CM88,California - Santo Rosa
+CM95,California - San Luis Obispo
+CM97,California - San Jose
+CM98,California- Sacramento
+CN73,Oregon - West
+CN84,Oregon - Salem Eugene
+CN85,Oregon - Portland
+CN87,Washington - Seattle
+CN88,Washington - Everett : Canada Vancouver Island
+CN89,Canada - Vancouver
+CN94,Oregon - Central
+CN96,Washington - Yakima
+CM99,California North
+DL82,Mexico - Zacatecas
+DL92,Mexico - San Luis Potosi
+DM03,California - Los Angeles Area
+DM04,California - Los Angeles Area
+DM12,California - San Diego:Mexico - Tijuana
+DM13,California - Los Angeles San Diego area
+DM14,California - Los Angeles San Diego area : San Bernadino
+DM34,Arizona - Phoenix Area
+DM42,Arizona - Tuscon
+DM43,Arizona - Phoenix Mesa Area
+DM62,USA:New Mexico - Las Cruces
+DM63,New Mexico
+DM65,New Mexico - Albuquerque
+DM75,New Mexico - Santa Fe
+DM78,Colorado - Pueblo:Colorado Springs
+DM79,Colorado - Denver
+DM91,Texas - San Angelo
+DN17,Washington - Spokane
+DN40,Utah - Salt Lake City
+DN62,Wyoming - Casper
+DN70,Colorado - Fort Collins - Boulder
+DN84,South Dakota - Rapid City
+DO21,Canada - Calgary
+DO33,Canada - Edmonton
+DO81,Canada:Saskatchewan - Yorkton
+EJ79,Costa Rica - San Jose
+EK70,Costa Rica - San Jose area
+EL83,Cuba - Havana
+EL87,Florida - Tampa
+EL88,Florida - Tampa
+EL93,Cuba
+EL95,USA:Florida:Miami
+EL96,USA:Florida:Ft. Lauderdale
+EL97,Florida - South Central
+EL98,Florida - Orlando
+EL99,Florida - Daytona Beach
+EM02,Texas - Abilene
+EM03,Texas - Abilene
+EM10,Texas - Austin
+EM11,Texas - Waco
+EM12,Texas - Dallas Fort Worth
+EM13,Texas - Dallas
+EM15,Oklahoma - Oklahoma City
+EM16,USA:Oklahoma:Stillwater
+EM20,Texas - Houston area
+EM25,Oklahoma West:Arkansas East
+EM28,USA:Kanasas - Kansas City area
+EM29,USA:Kanasas - Kansas City
+EM35,Arkansas - Little Rock area
+EM36,Arkansas:Missouri
+EM40,Louisiana - New Orleans:Baton Rouge
+EM48,Missouri - St. Louis
+EM49,USA:Missouri East - Illinois West
+EM69,USA:Indiana:Indianapolis
+EM84,Georgia - Atlanta area
+EN11,Nebraska - Omaha area
+EN34,Minnesota - Minneapolis
+EN35,Minnesota - Minneapolis Metro
+EN52,Illinois - Chicago area
+EN61,Illinois - Chicago area:Indiana north
+EN62,Illinois - Chicago
+EN71,Indiana - Fort Wayne
+EN82,Michigian - Detroit
+EN91,Ohio - Cleveland
+FN42,Massachussets - Boston
+FF46,Chile - Santiago
+FF47,Chile - Santiago area
+FG46,Chile - Northern
+FG73,Argentina:Northern
+FM18,Virginia:Maryland
+FJ08,Panama - Panama City
+FJ35,Columbia - Bogota area
+FK58,Dominican Republic - Santo Domingo
+FK60,Venezuela - Caracas
+FK68,USA:Puerto Rico - San Juan
+FL01,Cuba
+FL02,Cuba
+FL20,Cuba
+FN04,Canada - Toronto area
+FN10,Pennsylvania - Harrisburg
+FN20,Pennsylvania - Philadelphia
+FN21,Pennsylvania - Scranton
+FN31,Connecticut - New Haven
+FN86,Canada - Prince Edward Island
+GF05,Argentina - Buenes Aires
+GG14,Paraguay - Asuncion
+GG66,Brazil - Sao Paulo
+GJ40,Brazil - Northern
+HI21,Brazil - Recife
+HM77,Azores
+HP94,Iceland - Reykjavik
+IK28,Mauritania
+IL18,Canary Islands
+IL28,Canary Islands
+IL38,Canary Islands
+IM58,Portugal - Lisbon
+IM67,Spain - Seville
+IM76,Gibraltar:Spain - Malaga
+IM98,Spain Southeast
+IM99,Spain - Valencia
+IN83,Spain - Bilbao
+IN80,Spain - Madrid
+IO62,Ireland SW
+IO64,Northern Ireland
+IO83,UK - Liverpool Manchester
+IO84,UK - England North
+IO93,UK - England North
+JM49,Sardinia South
+JN01,Spain - Barcelona area
+JN05,France - Limoges
+JN33,France - Nice
+JN36,Switzerland - Geneva 
+JN37,Switzerland:France Southwest
+JN45,Italy - Milan
+JN49,Germany - Frankfurt Stuttgart area
+JN54,Italy - Bologna
+JN62,Italy - Rome area
+JN65,Italy - Venice:Croatia:Slovenia
+JN70,Italy - Naples
+JN77,Austria - Graz
+JN84,Bosnia - Northwest
+JN86,Hungary West:Slovenia East:Croatia North
+JN97,Hungary - Budapest
+JO01,England southeast
+JO10,France:Belgium
+JO20,Belgium Brussels
+JO21,Netherlands - Rotterdam:Belgium - Antwerp
+JO22,Netherlands - Amsterdam
+JO31,Germany - Dusseldorf
+JO40,Germany - Frankfurt
+JO41,Germany - Central
+JO80,Poland:South - Czech Rep. North
+JP53,Norway:Trondheim
+JP80,Sweden:Southeast
+KG43,S. Africa - Johannesburg
+KM17,Greece - Athens
+KM46,Greece - Rhodes:Western Turkey
+KN11,Macedonia - Greece - Bulgaria
+KN77,Ukraine - Zaporizhia
+KN89,Ukraine - Eastern
+KO02,Poland - Warsaw
+KO03,Poland - Northern
+KO11,Poland - Southeastern
+KN22,Bulgaria - Central
+KO50,Ukraine - Kiev
+KO53,Belarus - Eastern
+KP20,Finland - Helsinki
+LP04,Russia - Northwest
+LO06,Russia Western
+MO16,Russia - Yekaterinburg area
